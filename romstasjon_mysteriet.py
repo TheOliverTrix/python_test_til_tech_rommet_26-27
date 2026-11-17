@@ -3,14 +3,23 @@ import random
 # Velkommen til Romstasjon Mysteriet!
 # En alien har stjålet nøkkelkortet. Klarer dere å finne den skyldige?
 #
-# ELEVOPPDRAG:
-# 1. Endre robotnavnet og teksten under. Hva skjer når dere kjører programmet?
-# 2. Endre antall mistenkte fra 10 til et annet tall. Hva skjer med hintene?
-# 3. Bonus: Endre poengsummen eller finn på en morsom premie.
+# ELEVOPPDRAG – velg oppgaver:
+# Start:
+# 1. Gi roboten et nytt navn, og skriv om alarmmeldingen.
+# 2. Endre antall mistenkte. Test om valg og hint fortsatt fungerer.
+# 3. Endre antall forsøk. Blir spillet lettere eller vanskeligere?
+# Utforsk:
+# 4. Prøv å skrive bokstaver eller et tall utenfor området. Hva skjer?
+# 5. Spill flere ganger. Er den skyldige den samme hver gang?
+# 6. Endre rompoengene og finn på en ny premie.
+# Bonus:
+# 7. Endre programmet slik at ugyldige svar ikke bruker et forsøk.
+# 8. Legg til et nytt hint, for eksempel om nummeret er partall eller oddetall.
 
 robot = "BIP"
 antall_mistenkte = 10
 maks_forsok = 4
+rompoeng = 100
 
 print("=" * 38)
 print("     ROMSTASJON MYSTERIET")
@@ -41,7 +50,7 @@ for forsok in range(1, maks_forsok + 1):
         print()
         print(f"Riktig! Alien nummer {skyldig} hadde nøkkelkortet!")
         print("Dere reddet romstasjonen!")
-        print("Belønning: 100 rompoeng og en pose månekjeks.")
+        print(f"Belønning: {rompoeng} rompoeng og en pose månekjeks.")
         break
 
     if valg < skyldig:
